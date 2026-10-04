@@ -16,8 +16,17 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str = "postgresql://tpmr:tpmr_dev@localhost:5432/tpmr_db"
 
-    # Redis
+  class Settings(BaseSettings):
+
     REDIS_URL: str = "redis://localhost:6379/0"
+
+    model_config = SettingsConfigDict(
+
+        env_file=".env",
+
+        extra="ignore",
+
+    )
 
     # CORS
     # "localhost" et "127.0.0.1" sont deux origines DIFFÉRENTES pour le
