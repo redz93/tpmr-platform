@@ -15,6 +15,10 @@ async def lifespan(app: FastAPI):
     # connecter, la première chose à vérifier est que son origine (celle
     # affichée dans la barre d'adresse du navigateur) apparaît bien ici.
     print(f"[TPMR] Origines CORS autorisées : {settings.CORS_ORIGINS}")
+    print(
+    f"[TPMR] Redis configuré : "
+    f"{settings.REDIS_URL.split('@')[-1] if '@' in settings.REDIS_URL else settings.REDIS_URL}"
+)
 
     listener_task = start_redis_listener()
     yield
