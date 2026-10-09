@@ -2,7 +2,7 @@ import axios from "axios";
 import { useAuthStore } from "@/stores/auth-store";
 import type { DriverProfile, Ride, RideStatus } from "@/lib/types";
 
-const API_URL = process.env.EXPO_PUBLIC_API_URL ?? "http://localhost:8000/api/v1";
+const API_URL = process.env.EXPO_PUBLIC_API_URL ?? "https://confident-insight-production-b1f6.up.railway.app/api/v1";
 
 const client = axios.create({ baseURL: API_URL, timeout: 15000 });
 

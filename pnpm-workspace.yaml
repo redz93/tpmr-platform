@@ -1,7 +1,8 @@
 packages:
   - "apps/*"
+  - "services/*"
   - "packages/*"
 allowBuilds:
-  dtrace-provider: false
-  sharp: false
   unrs-resolver: false
+
+nodeLinker: hoisted

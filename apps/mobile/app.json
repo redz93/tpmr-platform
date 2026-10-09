@@ -7,13 +7,13 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "icon": "./assets/icon.png",
-    
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "fr.tpmr.chauffeur",
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "TPMR utilise votre position pour partager votre trajet en temps réel avec le dispatch.",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "TPMR suit votre position pendant une course pour informer le dispatch et calculer l'heure d'arrivée."
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "TPMR suit votre position pendant une course pour informer le dispatch et calculer l'heure d'arrivée.",
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
@@ -30,26 +30,24 @@
         "backgroundColor": "#0F5C5C"
       }
     },
- "plugins": [
-  "expo-router",
-  [
-    "expo-splash-screen",
-    {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0F5C5C"
-    }
-  ],
-  [
-    "expo-location",
-    {
-      "locationAlwaysAndWhenInUsePermission": "TPMR suit votre position pendant une course pour informer le dispatch."
-    }
-  ]
-],
-    
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#0F5C5C"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "TPMR suit votre position pendant une course pour informer le dispatch."
+        }
+      ]
+    ],
     "extra": {
-      "apiUrl": "http://localhost:8000/api/v1",
       "router": {},
       "eas": {
         "projectId": "e60072fc-f642-4aaf-aaac-ca639ff892e6"
